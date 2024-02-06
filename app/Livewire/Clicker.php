@@ -6,12 +6,14 @@ use Livewire\Component;
 
 class Clicker extends Component
 {
-    public function handleClick(){
+    public function createNewUser(){
         dump('Click');
     }
 
     public function render()
     {
-        return view('livewire.clicker');
+        return view('livewire.clicker', [
+            'users' => \App\Models\User::all()
+        ]);
     }
 }
