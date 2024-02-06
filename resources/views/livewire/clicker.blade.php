@@ -4,14 +4,23 @@
             <div class="mb-3">
               <label for="name" class="form-label">Name</label>
               <input wire:model='name' type="text" class="form-control" id="name" name='name' aria-describedby="emailHelp">
+              @error('name')
+                <div class='text-danger mt-2'>{{$message}}</div>
+              @enderror
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input wire:model='email' type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                @error('email')
+                    <div class='text-danger mt-2'>{{$message}}</div>
+                @enderror
             </div>
             <div class="mb-3">
-              <label for="password" class="form-label">Password</label>
-              <input wire:model='password' type="password" class="form-control" id="password" name="password">
+                <label for="password" class="form-label">Password</label>
+                <input wire:model='password' type="password" class="form-control" id="password" name="password">
+                @error('password')
+                    <div class='text-danger mt-2'>{{$message}}</div>
+                @enderror
             </div>
             <button class="btn btn-success">Submit</button>
         </form>
