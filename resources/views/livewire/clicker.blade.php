@@ -4,7 +4,7 @@
     <ul>
         @foreach($users as $user)
             <li style="margin-bottom: 10px">
-                Name:{{ $user->name }}. Email: {{$user->email}}
+                Name: {{ $user->name }}. Email: {{$user->email}}
             </li>
         @endforeach
     </ul>
