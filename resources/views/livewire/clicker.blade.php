@@ -1,3 +1,3 @@
 <div>
-    <button>Click me</button>
+    <button wire:click='handleClick'>Click me</button>
 </div>
